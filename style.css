@@ -1,0 +1,237 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 40px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #ff5e91;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.title::before,
+.title::after {
+  content: '';
+  display: inline-block;
+  width: 25%;
+  height: 1px;
+  background: #f387d8;
+  position: absolute;
+  top: 50%;
+}
+
+.title::before {
+  left: 0;
+}
+
+.title::after {
+  right: 0;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: border 0.3s;
+}
+
+.card input[type='radio'] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #6b6b6b;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.card input[type='radio']::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  background-color: pink;
+}
+
+.card input[type='radio']:checked {
+  border-color: #ff5e91;
+}
+
+.card input[type='radio']:checked::before {
+  transform: scale(1);
+  background-color: #ff5e91;
+}
+
+.card .left {
+  margin-left: 40px;
+}
+
+.card .left strong {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card .left .discount {
+  background-color: #ff5e91;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-left: 8px;
+}
+
+.card .left p {
+  font-size: 13px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.card .right {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  text-align: right;
+}
+
+.card .right .price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card .right .old-price {
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.popular {
+  border: 2px solid #ff5e91;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  background: #ff5e91;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.free {
+  color: #ff5e91;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.add-to-cart {
+  width: 100%;
+  background: #ff5e91;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.extra-options {
+  margin-top: 15px;
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  background-color: #fff0f6;
+  border-radius: 6px;
+}
+
+.extra-options.active {
+  display: block;
+  width: 60%;
+  background-color: #ffffff;
+}
+
+.options-row label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.label-row span {
+  width: 130px;
+  text-align: center;
+}
+
+.options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 6px 0;
+}
+
+.options-row select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 120px;
+}

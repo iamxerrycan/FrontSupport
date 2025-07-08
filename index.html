@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BOGO Offer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h2 class="title">YAY! It’s BOGO</h2>
+
+    <form class="card-list">
+      <!-- Box 1 -->
+      <label class="card">
+        <input type="radio" name="unit" value="10" data-units="1" />
+        <div class="left">
+          <strong>1 Unit</strong>
+          <span class="discount">10% off</span>
+          <p>Standard Price</p>
+        </div>
+        <div class="right">
+          <div class="price">$10.00 USD</div>
+          <div class="old-price">$24.00 USD</div>
+        </div>
+        <div class="extra-options"></div>
+      </label>
+
+      <!-- Box 2 -->
+      <label class="card popular">
+        <span class="badge">MOST POPULAR</span>
+        <input type="radio" name="unit" value="18" data-units="2" />
+        <div class="left">
+          <strong>2 Unit</strong>
+          <span class="discount">20% off</span>
+          <p>Standard Price</p>
+        </div>
+        <div class="right">
+          <div class="price">$18.00 USD</div>
+          <div class="old-price">$24.00 USD</div>
+        </div>
+        <div class="extra-options"></div>
+      </label>
+
+      <!-- Box 3 -->
+      <label class="card">
+        <input type="radio" name="unit" value="24" data-units="3" />
+        <div class="left">
+          <strong>3 Unit</strong>
+          <span class="discount">30% off</span>
+          <p>Standard Price</p>
+        </div>
+        <div class="right">
+          <div class="price">$24.00 USD</div>
+          <div class="old-price">$24.00 USD</div>
+        </div>
+        <div class="extra-options"></div>
+      </label>
+    </form>
+
+    <div class="summary">
+      <span class="free">Free Delivery</span>
+      <span class="total">Total : <span id="total-price">$0.00 USD</span></span>
+    </div>
+
+    <button class="add-to-cart">+ Add to Cart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
